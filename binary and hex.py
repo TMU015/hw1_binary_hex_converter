@@ -2,10 +2,9 @@ decimal = int(input("請輸入一個十進位數字(範圍 0-255): "))
 binary = ""
 if decimal < 0 or decimal > 255:
     print("輸入無效，請輸入 0 到 255 之間的數字")
-elif decimal == 0:
-    binary = "00000000"
 else:
-    binary = ""
+    if decimal == 0:
+        binary = "00000000"
     while decimal > 0:
         binary = str(decimal % 2) + binary
         decimal = decimal // 2
